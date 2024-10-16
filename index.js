@@ -12,16 +12,16 @@ sequelize.authenticate()
     .then(() => {
         console.log('conectado com o banco de dados,');
     })
-    .catch(err => {
-        console.error('não conectado com o banco de dados:', err);
+    .catch(fail => {
+        console.error('não conectado com o banco de dados:', fail);
     });
 
 sequelize.sync()
     .then(() => {
         console.log('modelos sincronizados com o bd.');
     })
-    .catch(err => {
-        console.error('não sincronizado com o bd:', err);
+    .catch(fail => {
+        console.error('não sincronizado com o bd:', fail);
     });
 
 app.listen(9000, () => {
